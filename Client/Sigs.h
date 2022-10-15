@@ -1,0 +1,36 @@
+#pragma once
+
+// 2.5 - 4.5
+#define GWorld_1_8 "48 8B 1D ? ? ? ? 48 85 DB 74 3B 41" //3 + 7
+#define GObjects_1_8 "48 8B 05 ? ? ? ? 48 8D 1C C8 81 4B ? ? ? ? ? 49 63 76 30" //3 + 7
+#define FNTS_1_8 "48 89 5C 24 ? 57 48 83 EC 40 83 79 04 00 48 8B DA 48 8B F9"
+#define Free_1_8 "48 85 C9 74 1D 4C 8B 05 ? ? ? ? 4D 85 C0"
+#define SCOI_1_8 "4C 89 44 24 ? 53 55 56 57 41 54 41 56 41 57 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ?"
+//#define ProcessEvent_1_8 "40 55 56 57 41 54 41 55 41 56 41 57 48 81 EC ? ? ? ? 48 8D 6C 24 ? 48 89 9D ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C5 48 89 85 ? ? ? ? 48 63 41 0C"
+#define SpawnActor_1_8 "40 53 56 57 48 83 EC 70 48 8B 05 ? ? ? ? 48 33 C4 48 89 44 24 ? 0F 28 1D ? ? ? ? 0F 57 D2 48 8B B4 24 ? ? ? ? 0F 28 CB"
+
+// C1 (GLOBAL)
+#define C1_PROCESSEVENT "40 55 56 57 41 54 41 55 41 56 41 57 48 81 EC ? ? ? ? 48 8D 6C 24 ? 48 89 9D ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C5 48 89 85 ? ? ? ? 8B 41 0C 45 33 F6 3B 05 ? ? ? ? 4D 8B F8 48 8B F2 4C 8B E1 41 B8 ? ? ? ? 7D 2A"
+#define C1_GWORLD "48 89 05 ? ? ? ? 48 8B 8F"
+#define C1_GOBJECTS "48 8D 05 ? ? ? ? 48 89 01 33 C9 84 D2 41 8B 40 08 49 89 48 10 0F 45 05 ? ? ? ? FF C0 49 89 48 10 41 89 40 08"
+#define C1_FNTS "C3 48 8B 42 18 48 8D 4C 24 30 48 8B D3 48 89 44 24 30 E8 ? ? ? ?"
+
+// C1 (S9-S10)
+#define C1S9_LOADOBJECT "4C 89 4C 24 ? 48 89 54 24 ? 48 89 4C 24 ? 55 53 56 57 41 54 41 55 41 56 41 57 48 8B EC 48 83 EC 78 45 33 F6"
+#define C1S9_SPAWNACTOR "40 53 56 57 48 83 EC 70 48 8B 05 ? ? ? ? 48 33 C4 48 89 44 24 ? 0F 28 1D ? ? ? ? 0F 57 D2 48 8B B4 24 ? ? ? ? 0F 28 CB"
+#define C1S9_FREE "48 85 C9 74 2E 53"
+#define C1S9_GWORLD "48 8B 1D ? ? ? ? 48 85 DB 74 3B 41"
+#define C1S9_GON "40 53 48 83 EC 20 48 8B D9 48 85 D2 75 30 33 C0 48 89 01 48 C7 41 08 ? ? ? ? E8 ? ? ? ? 48 8B 0B 48 8D 15 ? ? ? ? 41 B8 ? ? ? ? E8 ? ? ? ? 48 8B C3 48 83 C4 20 5B C3 48"
+#define C1S9_GOBJECTS "49 63 C8 48 8D 14 40 48 8B 05 ? ? ? ? 48 8B 0C C8 48 8D 04 D1"
+#define C1S9_GETPLAYERCONTROLLER "83 B9 ? ? ? ? ? 7E ? 48 8B 89 ? ? ? ? E9"
+#define C1S9_SCOI "48 89 5C 24 18 55 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 85 ? ? ? ? 44 8B A5 ? ? ? ? 48 8D 05"
+#define C1S9_FNTS "48 89 5C 24 ? 57 48 83 EC 30 83 79 04 00 48 8B DA 48 8B F9"
+
+#define C1S5_FREE "48 85 C9 74 2E 53 48 83 EC 20 48 8B D9"
+#define C1S5_SPAWNACTOR "40 53 56 57 48 83 EC 70 48 8B 05 ? ? ? ? 48 33 C4 48 89 44 24 ? 0F 28 1D ? ? ? ? 0F 57 D2 48 8B B4 24 ? ? ? ? 0F 28 CB"
+#define C1S5_LOADOBJECT "4C 89 4C 24 ? 48 89 54 24 ? 48 89 4C 24 ? 55 53 56 57 41 54 41 55 41 56 41 57 48 8B EC 48 83 EC 78 45 33 F6"
+#define C1S5_GETOBJECTNAME  "48 89 5C 24 ? 57 48 83 EC 30 83 79 04 00 48 8B DA 48 8B F9"
+#define C1S5_GOBJECTS  "48 8B 05 ? ? ? ? 48 8B 0C C8 48 8D 04 D1 EB 03 48 8B ? 81 48 08 ? ? ? 40 49"
+#define C1S5_GETPLAYERCONTROLLER  "83 B9 ? ? ? ? ? 7E ? 48 8B 89 ? ? ? ? E9"
+#define C1S5_SCOI  "48 89 5C 24 ? 55 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 85 ? ? ? ? 44 8B A5 ? ? ? ? 48 8D 05 ? ? ? ?"
+#define C1S5_SLOI  "4C 89 4C 24 ? 48 89 54 24 ? 48 89 4C 24 ? 55 53 56 57 41 54 41 55 41 56 41 57 48 8B EC 48 83 EC 78 45 33 F6"
